@@ -200,7 +200,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center gap-3">
+        <div id="account-actions" class="flex items-center gap-3">
 
           <button id="language-toggle"
             type="button"
@@ -1610,6 +1610,46 @@
       "NearU Search System Loaded Successfully"
     );
 
+  </script>
+
+  <script src="frontend-api.js"></script>
+  <script>
+    (() => {
+      const accountActions = document.getElementById('account-actions');
+      const cachedUser = NearUAPI.currentUser();
+      if (!cachedUser) return;
+
+      NearUAPI.me()
+        .then(({ user }) => {
+          const accountLabel = document.createElement('span');
+          accountLabel.className = 'hidden sm:inline text-sm font-medium text-slate-600';
+          accountLabel.textContent = user.name;
+
+          const logoutButton = document.createElement('button');
+          logoutButton.type = 'button';
+          logoutButton.className = 'text-sm font-medium text-slate-600 hover:text-primary-600';
+          logoutButton.textContent = 'Log Out';
+          logoutButton.addEventListener('click', () => {
+            NearUAPI.logout();
+            window.location.reload();
+          });
+
+          accountActions.replaceChildren(
+            ...[...accountActions.children].filter((element) =>
+              element.id === 'language-toggle' || element.id === 'dark-mode-toggle'
+            ),
+            accountLabel,
+            logoutButton
+          );
+        })
+        .catch((error) => {
+          if (/unauthorized|user not found/i.test(error.message)) {
+            NearUAPI.logout();
+          } else {
+            console.error('Could not verify the signed-in account:', error);
+          }
+        });
+    })();
   </script>
 
 </body>
