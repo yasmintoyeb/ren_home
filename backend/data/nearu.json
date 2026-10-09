@@ -49,6 +49,16 @@
       "phone": null,
       "verified": false,
       "createdAt": "2026-10-08T06:05:38.265Z"
+    },
+    {
+      "id": 6,
+      "name": "YASMIN TOYEB",
+      "email": "yasmin.toyeb@fellow.passerellesnumeriques.org",
+      "password": "f29614892e65f1248ed6fac0ef4757e0:b7f6bccbafbd918fd0fbc9709a96b8b49afc9337612474cb2e081a1f3cc510f7e7eafec91c07ad42c2b83dcfb1acf8f421e34870efb4c9af6fdb1b9ef92de8c9",
+      "role": "landlord",
+      "phone": null,
+      "verified": false,
+      "createdAt": "2026-10-09T08:20:17.324Z"
     }
   ],
   "properties": [
@@ -259,7 +269,7 @@
   ],
   "inquiries": [],
   "nextIds": {
-    "user": 6,
+    "user": 7,
     "property": 12,
     "inquiry": 1
   }
