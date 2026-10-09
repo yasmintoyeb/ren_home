@@ -1,0 +1,13 @@
+{
+  "name": "nearu-backend",
+  "version": "1.0.0",
+  "description": "NearU student rental backend API for Cambodia",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["nearu", "student-rental", "cambodia"],
+  "author": "NearU Team",
+  "license": "MIT"
+}

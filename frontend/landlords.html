@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Landlords – NearU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="flex items-center gap-2 font-bold text-xl text-primary-600">
+            <span class="w-8 h-8 bg-primary-600 text-white rounded-lg flex items-center justify-center text-sm">🏠</span>
+            NearU.
+          </a>
+          <div class="hidden md:flex items-center gap-1">
+            <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-primary-600 hover:bg-slate-100 rounded-lg">Home</a>
+            <a href="listings.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-primary-600 hover:bg-slate-100 rounded-lg">Listings</a>
+            <a href="map.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-primary-600 hover:bg-slate-100 rounded-lg">Map</a>
+            <a href="how-it-works.html" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-primary-600 hover:bg-slate-100 rounded-lg">How it Works</a>
+            <a href="landlords.html" class="px-3 py-2 text-sm font-medium text-primary-600 bg-primary-50 rounded-lg">For Landlords</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="text-sm text-slate-500 hover:text-slate-700">EN ▾</button>
+          <a href="login.html" class="text-sm font-medium text-slate-600 hover:text-primary-600">Login</a>
+          <a href="signup.html" class="px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-700">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl lg:text-5xl font-bold leading-tight">List Your Property<br>for Free</h1>
+        <p class="mt-4 text-lg text-primary-100">
+          Reach thousands of students near universities in Cambodia. Get direct inquiries and fill your rooms faster.
+        </p>
+        <a href="#form" class="inline-flex items-center gap-2 mt-8 bg-white text-primary-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-primary-50 transition">
+          🚀 Get Started – List Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <div class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center text-xl">🏷️</div>
+        <h3 class="mt-4 font-semibold text-slate-900">Free Listing</h3>
+        <p class="mt-2 text-sm text-slate-500">List your property at no cost and start receiving inquiries today.</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <div class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center text-xl">✅</div>
+        <h3 class="mt-4 font-semibold text-slate-900">Verified Badge</h3>
+        <p class="mt-2 text-sm text-slate-500">Get a verified landlord badge to build trust and stand out to students.</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <div class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center text-xl">💬</div>
+        <h3 class="mt-4 font-semibold text-slate-900">Direct Student Inquiries</h3>
+        <p class="mt-2 text-sm text-slate-500">Receive messages and calls directly from interested students near you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section id="form" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 lg:p-10">
+      <h2 class="text-2xl font-bold text-slate-900">Add Your Property</h2>
+      <p class="mt-1 text-sm text-slate-500">Fill in the details below to list your property and reach students near universities in Cambodia.</p>
+
+      <form id="property-form" class="mt-8 space-y-6">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="property-title" class="block text-sm font-medium text-slate-700 mb-1.5">Property Title</label>
+            <input id="property-title" name="title" type="text" required maxlength="120" placeholder="e.g., Modern Room near Royal University of Phnom Penh" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
+          </div>
+          <div>
+            <label for="property-price" class="block text-sm font-medium text-slate-700 mb-1.5">Monthly Price (USD)</label>
+            <div class="relative">
+              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+              <input id="property-price" name="price" type="number" min="1" max="100000" step="0.01" required placeholder="150" class="w-full border border-slate-200 rounded-xl pl-8 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
+            </div>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="property-location" class="block text-sm font-medium text-slate-700 mb-1.5">Property Location</label>
+            <input id="property-location" name="location" type="text" required maxlength="160" placeholder="e.g., Toul Kork, Phnom Penh" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
+          </div>
+          <div>
+            <label for="property-university" class="block text-sm font-medium text-slate-700 mb-1.5">Nearby University</label>
+            <select id="property-university" name="university" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+              <option value="">Select university (optional)</option>
+              <option value="RUPP">RUPP – Royal University of Phnom Penh</option>
+              <option value="RULE">RULE – Royal University of Law and Economics</option>
+              <option value="PUC">PUC – Paññāsāstra University of Cambodia</option>
+              <option value="NUM">NUM – National University of Management</option>
+              <option value="ITC">ITC – Institute of Technology of Cambodia</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="property-type" class="block text-sm font-medium text-slate-700 mb-1.5">Property Type</label>
+            <select id="property-type" name="type" required class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+              <option value="">Select property type</option>
+              <option value="Private Room">Private Room</option>
+              <option value="Studio">Studio</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Shared House">Shared House</option>
+              <option value="House">House</option>
+            </select>
+          </div>
+          <div>
+            <label for="property-distance" class="block text-sm font-medium text-slate-700 mb-1.5">Distance to University (km)</label>
+            <input id="property-distance" name="distance" type="number" min="0" max="100" step="0.1" value="1" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-2">Amenities (Select all that apply)</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="amenities" value="Wi-Fi" class="rounded text-primary-600" /> Wi-Fi</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="amenities" value="Air Conditioner" class="rounded text-primary-600" /> Air Conditioning</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="amenities" value="Furniture" class="rounded text-primary-600" /> Furniture</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="amenities" value="Private Bathroom" class="rounded text-primary-600" /> Private Bathroom</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="amenities" value="Kitchen" class="rounded text-primary-600" /> Kitchen Access</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="amenities" value="Laundry" class="rounded text-primary-600" /> Laundry</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="amenities" value="24/7 Security" class="rounded text-primary-600" /> 24/7 Security</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="amenities" value="Parking" class="rounded text-primary-600" /> Parking</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="property-description" class="block text-sm font-medium text-slate-700 mb-1.5">Description</label>
+          <textarea id="property-description" name="description" rows="4" maxlength="2000" placeholder="Describe the room, facilities, and nearby services." class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"></textarea>
+        </div>
+
+        <div>
+          <label for="property-image" class="block text-sm font-medium text-slate-700 mb-1.5">Upload Property Photo</label>
+          <input
+            id="property-image"
+            name="image"
+            type="file"
+            accept="image/*"
+            required
+            class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          />
+          <p class="mt-1 text-xs text-slate-400">Choose an image from your computer or phone (JPG, PNG, WebP, etc.).</p>
+
+          <div id="image-preview-container" class="hidden mt-4">
+            <img
+              id="image-preview"
+              src=""
+              alt="Selected property photo preview"
+              class="w-full max-h-64 object-cover rounded-xl border border-slate-200"
+            />
+          </div>
+        </div>
+
+        <p id="form-message" class="hidden rounded-xl p-4 text-sm" role="status" aria-live="polite"></p>
+        <button id="submit-listing" type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3.5 rounded-xl transition disabled:opacity-60 disabled:cursor-wait">
+          ✓ Submit Listing
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 font-bold text-primary-600">
+        <span class="w-7 h-7 bg-primary-600 text-white rounded-lg flex items-center justify-center text-xs">🏠</span>
+        NearU.
+      </div>
+      <p class="text-sm text-slate-500">© 2026 NearU. Made for students in Cambodia.</p>
+      <div class="flex gap-6 text-sm text-slate-500">
+        <a href="#" class="hover:text-primary-600">About</a>
+        <a href="#" class="hover:text-primary-600">Help</a>
+        <a href="#" class="hover:text-primary-600">Privacy</a>
+      </div>
+    </div>
+  </footer>
+  <script src="frontend-api.js"></script>
+  <script>
+    (() => {
+      const form = document.getElementById('property-form');
+      const message = document.getElementById('form-message');
+      const submitButton = document.getElementById('submit-listing');
+      const imageInput = document.getElementById('property-image');
+      const imagePreview = document.getElementById('image-preview');
+      const imagePreviewContainer = document.getElementById('image-preview-container');
+      let imagePreviewUrl = null;
+
+      imageInput.addEventListener('change', () => {
+        const file = imageInput.files && imageInput.files[0];
+
+        if (imagePreviewUrl) {
+          URL.revokeObjectURL(imagePreviewUrl);
+          imagePreviewUrl = null;
+        }
+
+        if (!file) {
+          imagePreview.removeAttribute('src');
+          imagePreviewContainer.classList.add('hidden');
+          return;
+        }
+
+        if (!file.type.startsWith('image/')) {
+          showMessage('Please choose a valid image file.', 'error');
+          imageInput.value = '';
+          imagePreview.removeAttribute('src');
+          imagePreviewContainer.classList.add('hidden');
+          return;
+        }
+
+        imagePreviewUrl = URL.createObjectURL(file);
+        imagePreview.src = imagePreviewUrl;
+        imagePreviewContainer.classList.remove('hidden');
+        message.classList.add('hidden');
+      });
+
+      function showMessage(text, type, links) {
+        message.replaceChildren();
+        message.className = `rounded-xl p-4 text-sm ${
+          type === 'success'
+            ? 'bg-emerald-50 text-emerald-800'
+            : 'bg-red-50 text-red-800'
+        }`;
+        message.appendChild(document.createTextNode(text));
+        if (links && links.length) {
+          const linkRow = document.createElement('span');
+          linkRow.className = 'mt-2 flex flex-wrap gap-3 font-medium';
+          links.forEach(({ label, href }) => {
+            const link = document.createElement('a');
+            link.href = href;
+            link.className = 'underline';
+            link.textContent = label;
+            linkRow.appendChild(link);
+          });
+          message.appendChild(linkRow);
+        }
+        message.classList.remove('hidden');
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        message.classList.add('hidden');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting listing…';
+
+        try {
+          const { user } = await NearUAPI.me();
+          if (user.role !== 'landlord') {
+            showMessage('Only landlord accounts can submit a property. Sign in with a landlord account or create one.', 'error', [
+              { label: 'Create landlord account', href: 'signup.html?role=landlord&redirect=landlords.html' },
+              { label: 'Sign in', href: 'login.html?redirect=landlords.html' }
+            ]);
+            return;
+          }
+
+          const formData = new FormData(form);
+          const university = String(formData.get('university') || '');
+          const imageFile = imageInput.files && imageInput.files[0];
+
+          if (!imageFile) {
+            showMessage('Please select a property photo before submitting.', 'error');
+            return;
+          }
+
+          if (!imageFile.type.startsWith('image/')) {
+            showMessage('Please choose a valid image file.', 'error');
+            return;
+          }
+
+          // Convert the selected image into a data URL for APIs that accept image data.
+          // For production, upload files to backend/storage and save the returned URL instead.
+          const imageDataUrl = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(String(reader.result || ''));
+            reader.onerror = () => reject(new Error('Could not read the selected image.'));
+            reader.readAsDataURL(imageFile);
+          });
+
+          const listing = {
+            title: String(formData.get('title') || '').trim(),
+            price: Number(formData.get('price')),
+            location: String(formData.get('location') || '').trim(),
+            university: university && university !== 'Other' ? university : '',
+            distance: Number(formData.get('distance')),
+            type: String(formData.get('type') || ''),
+            amenities: [...form.querySelectorAll('input[name="amenities"]:checked')]
+              .map((input) => input.value),
+            description: String(formData.get('description') || '').trim(),
+            image: imageDataUrl,
+            imageName: imageFile.name,
+            imageType: imageFile.type
+          };
+
+          const result = await NearUAPI.createProperty(listing);
+          form.reset();
+          document.getElementById('property-distance').value = '1';
+          if (imagePreviewUrl) {
+            URL.revokeObjectURL(imagePreviewUrl);
+            imagePreviewUrl = null;
+          }
+          imagePreview.removeAttribute('src');
+          imagePreviewContainer.classList.add('hidden');
+          showMessage(`Your property “${result.property.title}” was added successfully and is now available in listings.`, 'success', [
+            { label: 'View your listing', href: `property-detail.html?id=${encodeURIComponent(result.property.id)}` },
+            { label: 'Browse all listings', href: 'listings.html' }
+          ]);
+        } catch (error) {
+          const isUnauthorized = /login|required|unauthorized/i.test(error.message);
+          showMessage(
+            isUnauthorized
+              ? 'Please sign in with a landlord account before submitting a property.'
+              : `Could not submit your property: ${error.message}`,
+            'error',
+            isUnauthorized
+              ? [
+                  { label: 'Create landlord account', href: 'signup.html?role=landlord&redirect=landlords.html' },
+                  { label: 'Sign in', href: 'login.html?redirect=landlords.html' }
+                ]
+              : null
+          );
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = '✓ Submit Listing';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
